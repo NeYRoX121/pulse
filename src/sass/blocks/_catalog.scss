@@ -41,8 +41,8 @@
         display: none;
         justify-content: space-between;
         flex-wrap: wrap;
-        &:active {
-            display: flex;
+        &_active {
+            display: flex; 
         }
     }
     &-item {
