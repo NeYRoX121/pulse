@@ -104,4 +104,23 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    // Smooth scroll and page up
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $('a[href*=#]').bind("click", function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+        }, 1000);
+        e.preventDefault();
+        return false;
+        });
+        new WOW().init();
 });
